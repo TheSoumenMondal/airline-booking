@@ -1,5 +1,5 @@
 # config.json
-src/config/config.json
+config/config.json
 # Dependencies
 node_modules/
 npm-debug.log*
