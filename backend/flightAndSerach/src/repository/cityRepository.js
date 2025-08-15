@@ -6,19 +6,20 @@ class CityRepository {
       const city = await City.create({ name });
       return city;
     } catch (error) {
-      throw {error};
+      throw { error };
     }
   }
 
   async deleteCity({ id }) {
     try {
-      await City.destroy({
+      const result = await City.destroy({
         where: {
           id: id,
         },
       });
+      return result;
     } catch (error) {
-      throw {error};
+      throw { error };
     }
   }
 
@@ -27,7 +28,7 @@ class CityRepository {
       const city = await City.findByPk(cityId);
       return city;
     } catch (error) {
-      throw {error};
+      throw { error };
     }
   }
 
@@ -40,7 +41,7 @@ class CityRepository {
       });
       return city;
     } catch (error) {
-      throw {error};
+      throw { error };
     }
   }
 }
