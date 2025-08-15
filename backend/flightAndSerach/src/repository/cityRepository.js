@@ -34,12 +34,13 @@ class CityRepository {
 
   async updateCity(cityId, data) {
     try {
-      const city = await City.update(data, {
+      await City.update(data, {
         where: {
           id: cityId,
         },
       });
-      return city;
+      const updatedCity = await City.findByPk(cityId);
+      return updatedCity;
     } catch (error) {
       throw { error };
     }
