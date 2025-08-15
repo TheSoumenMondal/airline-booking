@@ -4,7 +4,7 @@ dotenv.config();
 
 const serverConfig = {
   PORT: process.env.PORT || 3000,
-  DB_URL: process.env.DB_URL,
+  SYNC_DB : process.env.SYNC_DB
 };
 
 module.exports = serverConfig;
